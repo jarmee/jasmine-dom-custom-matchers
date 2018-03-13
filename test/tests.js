@@ -62,37 +62,7 @@ describe("DOM Custom Matchers", function () {
 
 	
 
-	describe("toBeParentOf()", function () {
-		it("<fieldset> should be a parent of <legend> and <ul>", function () {
-			expect(this.fieldset).toBeParentOf(this.legend);
-			expect(this.fieldset).toBeParentOf(this.ul);
-		});
-
-		it("<html> should be a parent of <body>", function () {
-			expect(document.documentElement).toBeParentOf(document.body);
-		});
-
-		it("<body> should not be a parent of <html>", function () {
-			expect(document.body).not.toBeParentOf(document.documentElement);
-		});
-
-		it("farther ascendant should not be a parent of farther descendat [HTML Element] or [HTML Text] Object", function () {
-			expect(this.virtualParagraph).not.toBeParentOf(this.virtualTextNode);
-			expect(this.form).not.toBeParentOf(this.ul);
-		});
-
-		it("[HTML Element] or [HTML Text] Object should not be a parent of itselt", function () {
-			expect(this.virtualParagraph).not.toBeParentOf(this.virtualParagraph);
-			expect(document.body).not.toBeParentOf(document.body);
-			expect(this.fieldset).not.toBeParentOf(this.fieldset);
-		});
-
-		it("dynamically created [HTML Element] Object should be a parent of its dynamically created [HTML Element] or [HTML Text] children", function () {
-			expect(this.virtualDiv).toBeParentOf(this.virtualParagraph);
-			expect(this.virtualParagraph).toBeParentOf(this.virtualQuote);
-			expect(this.virtualQuote).toBeParentOf(this.virtualTextNode);
-		});
-	});
+	
 
 	describe("toHaveSameParent()", function () {
 		it("<body> and <head> should have the same <html> parent", function () {
