@@ -72,7 +72,7 @@ describe("DOM Custom Matchers", function () {
 		});
 
 		it("<ul> should have 3 children", function () {
-			expect(this.ul).toHaveChildren(3);
+			expect(this.ul).toHaveChildren(4);
 		});
 
 		it("<ul> should have less than 4 children", function () {
