@@ -158,6 +158,6 @@ declare namespace jasmine {
 }
 
 declare let _default: {};
-declare module '@luchsamapparat/jasmine-dom-custom-matchers' {
+declare module '@jarmee/jest-dom-custom-matchers' {
     export default _default;
 }
