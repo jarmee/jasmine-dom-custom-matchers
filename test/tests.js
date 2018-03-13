@@ -69,37 +69,7 @@ describe("DOM Custom Matchers", function () {
 	
 
 	
-	describe("toBePreviousSiblingOf()", function () {
-		it("<head> should be previous sibling of <body>", function () {
-			expect(document.head).toBePreviousSiblingOf(document.body);
-		});
-
-		it("the list of inputs <ul> should be placed before <legend>", function () {
-			expect(this.legend).toBePreviousSiblingOf(this.ul);
-		});
-
-		it("email input box should be preceded by password input box", function () {
-			expect(this.liA).toBePreviousSiblingOf(this.liB);
-		});
-
-		it("password input box should be preceded by submit button box", function () {
-			expect(this.liB).toBePreviousSiblingOf(this.liC);
-		});
-
-		it("email box should not be the previous sibling of submit button box", function () {
-			expect(this.liA).not.toBePreviousSiblingOf(this.liC);
-		});
-
-		it("<span> elements shoud be preceded by password and email input elements", function () {
-			expect(this.passwordSpan).toBePreviousSiblingOf(this.passwordInput);
-			expect(this.emailSpan).toBePreviousSiblingOf(this.emailInput);
-		});
-
-		it("dynamically created [HTML Element] should be previous sibling of another dynamically created [HTML Element]", function () {
-			expect(this.virtualParagraph).toBePreviousSiblingOf(this.virtualNextParagraph);
-		});
-	});
-
+	
 	describe("toBeEmpty()", function () {
 		it("<legend> should not be empty (should contain textNode)", function () {
 			expect(this.legend).not.toBeEmpty();
