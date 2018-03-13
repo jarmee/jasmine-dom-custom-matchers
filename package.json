@@ -1,12 +1,15 @@
 {
-  "name": "@luchsamapparat/jasmine-dom-custom-matchers",
+  "name": "@jarmee/jasmine-dom-custom-matchers",
   "version": "1.0.4",
   "description": "Set of 19 jasmine custom matchers to test html DOM.",
   "main": "lib/dom-matchers.js",
-  "types": "lib/dom-matchers.d.ts",
+  "types": "lib/dom-matchers.d.ts",  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/devrafalko/jasmine-dom-custom-matchers.git"
+  },
+  "scripts": {
+    "test": "jest"
   },
   "keywords": [
     "jasmine",
@@ -28,5 +31,14 @@
   "homepage": "https://github.com/devrafalko/jasmine-dom-custom-matchers#readme",
   "dependencies": {
     "@types/jasmine": "^2.6.0"
-  }
+  },
+  "devDependencies": {
+    "jest": "^22.4.2"
+  },
+  "jest": {   
+    "setupTestFrameworkScriptFile": "./test/setup-jest.js",
+    "testMatch": [
+      "**/*.spec.js?(x)"
+    ]    
+  } 
 }
