@@ -64,34 +64,6 @@ describe("DOM Custom Matchers", function () {
 
 	
 
-	
-
-	
-
-	
-	
-	describe("toBeEmpty()", function () {
-		it("<legend> should not be empty (should contain textNode)", function () {
-			expect(this.legend).not.toBeEmpty();
-		});
-
-		it("span elements should not be empty (should contain textNode)", function () {
-			expect(this.emailSpan).not.toBeEmpty();
-			expect(this.passwordSpan).not.toBeEmpty();
-		});
-
-		it("dynamically created [HTML Element] without any node appended should be empty", function () {
-			this.virtualBox = document.createElement('DIV');
-			expect(this.virtualBox).toBeEmpty();
-		});
-
-		it("dynamically created [HTML Element] with node appended should not be empty", function () {
-			expect(this.virtualDiv).not.toBeEmpty();
-			expect(this.virtualParagraph).not.toBeEmpty();
-			expect(this.virtualQuote).not.toBeEmpty();
-		});
-	});
-
 	describe("toHaveAnyAttribute()", function () {
 		it("<head> element should not have any attribute", function () {
 			expect(document.head).not.toHaveAnyAttribute();
