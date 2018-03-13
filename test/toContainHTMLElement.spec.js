@@ -14,7 +14,6 @@ describe("toContainHTMLElement()", function () {
         virtualParagraph.appendChild(virtualQuote);        
         virtualDiv = document.createElement('DIV');
         virtualDiv.appendChild(virtualParagraph);
-        
     });
 
     it("<html> should contain <body> element", function () {

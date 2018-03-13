@@ -9,7 +9,8 @@
     "url": "git+https://github.com/devrafalko/jasmine-dom-custom-matchers.git"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "keywords": [
     "jasmine",
