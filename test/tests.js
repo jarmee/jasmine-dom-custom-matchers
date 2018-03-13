@@ -66,87 +66,9 @@ describe("DOM Custom Matchers", function () {
 
 	
 
-	describe("toHaveChildren()", function () {
-		it("<ul> should have any children", function () {
-			expect(this.ul).toHaveChildren();
-		});
+	
 
-		it("<ul> should have 3 children", function () {
-			expect(this.ul).toHaveChildren(4);
-		});
-
-		it("<ul> should have less than 4 children", function () {
-			expect(this.ul).toHaveChildren(4, 'less than');
-		});
-
-		it("<ul> should have more than 2 children", function () {
-			expect(this.ul).toHaveChildren(2, 'more than');
-		});
-
-		it("<ul> should have 3 children or less", function () {
-			expect(this.ul).toHaveChildren(3, 'or less');
-			expect(this.ul).toHaveChildren(3, 'orless');
-			expect(this.ul).toHaveChildren(3, 'orLess');
-		});
-
-		it("<ul> should have 3 children or more", function () {
-			expect(this.ul).toHaveChildren(3, 'or more');
-		});
-
-		it("<ul> should not have 5 children", function () {
-			expect(this.ul).not.toHaveChildren(5);
-		});
-
-		it("<span> elements should not have any children", function () {
-			expect(this.emailSpan).toHaveChildren(0);
-			expect(this.emailSpan).not.toHaveChildren();
-		});
-
-		it("[HTML Text] Object should not be considered to be children", function () {
-			expect(this.emailSpan).not.toHaveChildren();
-			expect(this.emailSpan).toHaveChildren(0);
-			expect(this.virtualQuote).not.toHaveChildren();
-			expect(this.virtualQuote).toHaveChildren(0);
-		});
-
-		it("dynamically created [HTML Element] Object with dynamically created [HTML Element] children should have children", function () {
-			expect(this.virtualDiv).toHaveChildren();
-			expect(this.virtualParagraph).toHaveChildren();
-			expect(this.virtualQuote).not.toHaveChildren();
-		});
-	});
-
-	describe("toBeNextSiblingOf()", function () {
-		it("<body> should be next sibling of <head>", function () {
-			expect(document.body).toBeNextSiblingOf(document.head);
-		});
-
-		it("<legend> should be placed before the list of inputs <ul>", function () {
-			expect(this.ul).toBeNextSiblingOf(this.legend);
-		});
-
-		it("password input box should be preceded by email input box", function () {
-			expect(this.liB).toBeNextSiblingOf(this.liA);
-		});
-
-		it("submit button box should be preceded by password input box", function () {
-			expect(this.liC).toBeNextSiblingOf(this.liB);
-		});
-
-		it("submit button box should not be the next sibling of email box", function () {
-			expect(this.liC).not.toBeNextSiblingOf(this.liA);
-		});
-
-		it("password and email input element should be preceded by <span> element", function () {
-			expect(this.passwordInput).toBeNextSiblingOf(this.passwordSpan);
-			expect(this.emailInput).toBeNextSiblingOf(this.emailSpan);
-		});
-
-		it("dynamically created [HTML Element] should be next sibling of another dynamically created [HTML Element]", function () {
-			expect(this.virtualNextParagraph).toBeNextSiblingOf(this.virtualParagraph);
-		});
-	});
-
+	
 	describe("toBePreviousSiblingOf()", function () {
 		it("<head> should be previous sibling of <body>", function () {
 			expect(document.head).toBePreviousSiblingOf(document.body);
